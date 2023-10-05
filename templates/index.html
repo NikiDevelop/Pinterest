@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+      {% load static %}
+        <meta charset="utf-8">       
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <title>Pinterest Clone</title>
+        <link rel="icon" type="image/png" href="media/logo.png"/>
+
+    </head>
+    <body>
+        <div class="pinterest">
+            <div class="left">
+              <a href="/" class="logo"><i class="fab fa-pinterest"></i></a>
+              <a href="/" class="home" name="inicio">Inicio</a>
+              <a href="#" class="home" name="explorar">Explorar</a>
+            </div>                              
+            <div class="search left">              
+              <i class="fas fa-search" type="submit"></i>
+              <form method="get">  
+                <input type="search" placeholder="Buscar" name="buscar" cl>
+              </form> 
+            </div>         
+            <div class="right">
+              <a href="#" class="items"><i class="fas fa-bell"></i></a>
+              <a href="#" class="items"><i class="far fa-comment-dots"></i></a>
+              <a href="#" class="avatar">
+              </a>
+              <a href="#" class="items-down"><i class="fas fa-chevron-down"></i></a>
+            </div>
+          </div>
+      <div class="grid-container"> 
+        {% for post in posts %}       
+          <img class="grid-item" src="{{post.imagen.url}}">        
+        {% endfor %}
+      </div>      
+      {% block content %}
+      {% endblock content %} 
+    </body>    
+</html>
