@@ -26,7 +26,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'pinterest'
+    'pinterest',
 ]
 
 MIDDLEWARE = [
@@ -104,13 +104,18 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
+
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'  
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+
+STATICFILES_DIRS = (str(BASE_DIR.joinpath('static')),)
+
+
 MEDIA_URL = '/media/'
 MEDIA_ROOT =os.path.join(BASE_DIR, 'media')
-STATICFILES_DIRS = [
-    BASE_DIR / "static"
-]
-
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
