@@ -35,7 +35,7 @@ $ python manage.py migarate
 ```
 $ python manage.py runserver
 ```
-Para poder agregar nuevas películas o artículos tendrás que crearte un usuario. Rellena los datos que te pide, como nombre de usuario,
+Para poder agregar nuevas imágenes tendrás que crearte un usuario. Rellena los datos que te pide, como nombre de usuario,
 el email lo puedes dejar en blanco si quieres dándole a enter y por último introduce una contraseña y repítela.
 ```
 $ python manage.py createsuperuser
