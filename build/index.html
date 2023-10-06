@@ -1,1 +1,44 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"/><link rel="icon" href="https://bafybeie3dkjdydulam4igwx2hwaepkkyugze2z7bpohekdi2maqrgaaegq.ipfs.w3s.link/idealogo.png"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="theme-color" content="#000000"/><meta name="description" content="Web site created using create-react-app"/><link rel="apple-touch-icon" href="https://bafybeie3dkjdydulam4igwx2hwaepkkyugze2z7bpohekdi2maqrgaaegq.ipfs.w3s.link/idealogo.png"/><link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"><link rel="manifest" href="/manifest.json"/><title>Murkiva | Software Agency</title><link href="/static/css/main.35506147.chunk.css" rel="stylesheet"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div><script>!function(e){function r(r){for(var n,a,i=r[0],l=r[1],f=r[2],p=0,s=[];p<i.length;p++)a=i[p],Object.prototype.hasOwnProperty.call(o,a)&&o[a]&&s.push(o[a][0]),o[a]=0;for(n in l)Object.prototype.hasOwnProperty.call(l,n)&&(e[n]=l[n]);for(c&&c(r);s.length;)s.shift()();return u.push.apply(u,f||[]),t()}function t(){for(var e,r=0;r<u.length;r++){for(var t=u[r],n=!0,i=1;i<t.length;i++){var l=t[i];0!==o[l]&&(n=!1)}n&&(u.splice(r--,1),e=a(a.s=t[0]))}return e}var n={},o={1:0},u=[];function a(r){if(n[r])return n[r].exports;var t=n[r]={i:r,l:!1,exports:{}};return e[r].call(t.exports,t,t.exports,a),t.l=!0,t.exports}a.m=e,a.c=n,a.d=function(e,r,t){a.o(e,r)||Object.defineProperty(e,r,{enumerable:!0,get:t})},a.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},a.t=function(e,r){if(1&r&&(e=a(e)),8&r)return e;if(4&r&&"object"==typeof e&&e&&e.__esModule)return e;var t=Object.create(null);if(a.r(t),Object.defineProperty(t,"default",{enumerable:!0,value:e}),2&r&&"string"!=typeof e)for(var n in e)a.d(t,n,function(r){return e[r]}.bind(null,n));return t},a.n=function(e){var r=e&&e.__esModule?function(){return e.default}:function(){return e};return a.d(r,"a",r),r},a.o=function(e,r){return Object.prototype.hasOwnProperty.call(e,r)},a.p="/";var i=this.webpackJsonpagencia_marketing=this.webpackJsonpagencia_marketing||[],l=i.push.bind(i);i.push=r,i=i.slice();for(var f=0;f<i.length;f++)r(i[f]);var c=l;t()}([])</script><script src="/static/js/2.9e67ab05.chunk.js"></script><script src="/static/js/main.e847a2aa.chunk.js"></script></body></html>
+<!DOCTYPE html>
+
+<html>
+    <head>
+      {% load static %}
+        <meta charset="utf-8">       
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <title>Pinterest Clone</title>
+        <link rel="icon" type="image/png" href="media/logo.png"/>
+
+    </head>
+    <body>
+        <div class="pinterest">
+            <div class="left">
+              <a href="/" class="logo"><i class="fab fa-pinterest"></i></a>
+              <a href="/" class="home" name="inicio">Inicio</a>
+              <a href="#" class="home" name="explorar">Explorar</a>
+            </div>                              
+            <div class="search left">              
+              <i class="fas fa-search" type="submit"></i>
+              <form method="get">  
+                <input type="search" placeholder="Buscar" name="buscar" cl>
+              </form> 
+            </div>         
+            <div class="right">
+              <a href="#" class="items"><i class="fas fa-bell"></i></a>
+              <a href="#" class="items"><i class="far fa-comment-dots"></i></a>
+              <a href="#" class="avatar">
+              </a>
+              <a href="#" class="items-down"><i class="fas fa-chevron-down"></i></a>
+            </div>
+          </div>
+      <div class="grid-container"> 
+        {% for post in posts %}       
+          <img class="grid-item" src="{{post.imagen.url}}">        
+        {% endfor %}
+      </div>      
+      {% block content %}
+      {% endblock content %} 
+    </body>    
+</html>
