@@ -2,7 +2,7 @@ from django.db import models
 
 class Pinterest(models.Model):
     titulo = models.CharField(max_length=50)
-    imagen = models.ImageField(upload_to="pinterest", null=True, blank=True)
+    imagen = models.ImageField(null=True, blank=True)
 
     class Meta:
         verbose_name='post'
