@@ -1,4 +1,4 @@
-# Pinterest Clone con deploy en Azure
+# Pinterest Clone con deploy 
 ----------------------------------------------------------
 
 Lo primero creamos un entorno virtual.
