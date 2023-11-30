@@ -12,6 +12,7 @@ Tenemos que activar nuestro entorno virtual, tendremos que desplazarnos a la car
 $ cd env/scripts
 ```
 Activamos nuestro entorno virtual.
+
 ```
 $ .\activate
 ```
